@@ -1,0 +1,237 @@
+.main_bg{
+    background-color: rgb(4, 4, 54);
+    background-size: cover;
+    background-position: center center;
+    color: var(--white-color);
+}
+.white_bg{
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+.main_content{
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 10rem var(--gap);
+}
+
+.section{
+    min-height: 100vh;
+}
+
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    border-bottom: 0.1rem solid var(--light-gray-color);
+}
+.close_menu{
+    display: none;
+}
+.menu_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.menu h1{
+    font-size: 2.3rem;
+    color: var(--primary-color);
+}
+.menu h1 a{
+    color: inherit;
+}
+.menu ul{
+    list-style: none;
+    display: flex;
+}
+.menu ul li a{
+    display: block;
+    padding: 2rem;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    position: relative;
+}
+.menu ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: 0;
+    height: 0.2rem;
+    background-color: var(--secondary-color);
+    transition: all 300ms ease-in-out;
+}
+.menu ul li a:hover::after{
+    width: 50%;
+    left: 25%;
+}
+.menu_spacing{
+    height: 6.5rem;
+}
+
+.intro_content{
+    position: relative;
+  /*  top: -5rem; */
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--gap);
+    min-height: 100vh;   
+}
+.intro_text_content, .intro_img{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+.intro_img img{
+    max-width: 100%;
+    height: auto;
+}
+
+.top3_content{
+    max-width: 64rem;
+    display: flex;
+   /* flex-flow: column wrap; */
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.grid_one_content{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    min-height: 100vh;
+}
+.grid_main_head h2{
+    margin-bottom: 2rem;
+}
+.grid_description{
+    padding-bottom: 5rem;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    counter-reset: grid_counter;
+}
+.grid h3{
+    font-size: 3rem;
+    position: relative;
+    padding-left: 5rem;
+    padding-bottom: 2rem;
+}
+.grid h3::before{
+    counter-increment: grid_counter;
+    content: counter(grid_counter);
+    position: absolute;
+    font-size: 8rem;
+    font-style: italic;
+    top: -4rem;
+    left: -2rem;
+    transform: rotate(5deg);
+}
+
+.gallery_img{
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+}
+.gallery_img img{
+    transition: all 300ms ease-in-out;
+}
+.gallery_img img:hover{
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+}
+
+.contact_form{
+    grid-column: span 2;
+}
+.contact_form .form_grid{
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+.form_grid legend{
+    font-style: italic;
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+}
+.form_group{
+    flex: 1 1 32rem;
+}
+.form_group label{
+    display: block;
+    margin-bottom: 1rem;
+}
+.form_group input,
+.form_group textarea{
+    box-sizing: border-box;
+    border: none;
+    background: var(--white-color);
+    padding: 1.5rem 2rem;
+    width: 100%;
+    font-size: 3rem;
+    outline: none;
+}
+.form_group input:focus,
+.form_group textarea:focus{
+    box-shadow: 0 0 1rem 0.2rem var(--secondary-color);
+}
+.form_group button{
+    border: 0.5rem solid var(--white-color);
+    background: none;
+    color: var(--white-color);
+    font-size: 1.5rem 2rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    padding: 1rem;
+}
+.form_group button:hover{
+    background: var(--white-color);
+    color: var(--primary-color);
+}
+.form_group ::placeholder{
+    color: rgb(196, 196, 196)
+}
+
+.footer{
+    text-align: center;
+    font-size: 1.6rem;
+}
+.footer a{
+    color: #444;
+}
+.footer p{
+    margin: 0;
+    padding: 3rem;
+}
+.heart{
+    color: var(--secondary-color);
+}
+
+.back_to_top{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: var(--white-color);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--primary-color);
+    transform: rotate(-90deg);
+    border: 0.1rem solid var(--primary-color)
+}
